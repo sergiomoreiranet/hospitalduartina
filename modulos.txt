@@ -1,0 +1,343 @@
+1. Atendimento e Faturamento Multiconvênios – 🔁 Área Assistencial + Administrativa
+1.1. Cadastro de pacientes
+1.1.1. Integração com bases públicas (Cartão SUS, CNES, CPF).
+1.1.2. Registro de dados clínicos, pessoais e sociais.
+1.1.3. Histórico completo de atendimentos.
+
+1.2. Agendamento e triagem
+1.2.1. Marcação de consultas, exames e procedimentos.
+1.2.2. Triagem com classificação de risco (Protocolo Manchester).
+1.2.3. Controle de confirmação e fila de espera.
+
+1.3. Prontuário Eletrônico do Paciente (PEP)
+1.3.1. Evolução clínica, anamnese, diagnóstico e tratamento.
+1.3.2. Prescrição médica e de enfermagem.
+1.3.3. Anexos de exames e documentos.
+
+1.4. Emissão e controle de guias
+1.4.1. Guias TISS (ANS) com geração de XML.
+1.4.2. Guias SUS (AIH e APAC).
+1.4.3. Controle de autorizações.
+
+1.5. Faturamento por convênio
+1.5.1. Regras específicas (SUS, AMB, TUSS, particulares).
+1.5.2. Lançamento de serviços e pacotes.
+1.5.3. Controle de envio e retorno de faturas.
+
+1.6. Glosas e auditoria
+1.6.1. Identificação, justificativa e recurso de glosas.
+1.6.2. Histórico e relatórios por convênio.
+
+
+
+------------------------------------------------------------------------------------------------
+
+2. Módulo Financeiro – 💰 Administração e Contabilidade
+2.1. Contas a pagar e receber
+2.1.1. Registro e vencimento de obrigações.
+2.1.2. Integração com prestadores e convênios.
+2.1.3. Baixa automática via retorno bancário.
+
+2.2. Fluxo de caixa
+2.2.1. Acompanhamento diário e por período.
+2.2.2. Projeção de saldo e análise de liquidez.
+
+2.3. Geração de boletos e integração bancária
+2.3.1. Emissão e envio de boletos.
+2.3.2. Geração de remessas CNAB e leitura de retornos.
+
+2.4. Repasses médicos e cooperativas
+2.4.1. Cálculo por procedimento, percentual ou produção.
+2.4.2. Relatórios individuais e comprovantes.
+
+2.5. Relatórios e demonstrativos contábeis
+2.5.1. DRE, razão e balancetes.
+2.5.2. Conformidade com contabilidade pública e privada.
+
+2.6. Conciliação bancária
+2.6.1. Importação e comparação de extratos.
+2.6.2. Identificação automática de divergências.
+
+2.7. Centro de custos
+2.7.1. Classificação de receitas e despesas por setor.
+2.7.2. Integração com demais módulos.
+
+------------------------------------------------------------------------------------------------
+
+3. Farmácia e Almoxarifado – 💊 Suprimentos e Logística
+3.1. Gestão de estoques
+3.1.1. Entrada, saída e saldo por local de armazenamento.
+3.1.2. Controle por lote, validade e número de série.
+
+3.2. Prescrição e dispensação
+3.2.1. Prescrição eletrônica integrada ao PEP.
+3.2.2. Dispensação por paciente e enfermaria.
+
+3.3. Requisições e transferências internas
+3.3.1. Solicitação por setor ou profissional.
+3.3.2. Controle de aprovação e entrega.
+
+3.4. Rastreamento de uso
+3.4.1. Histórico de consumo por paciente, centro de custo e profissional.
+3.4.2. Indicadores de consumo.
+
+3.5. Materiais consignados
+3.5.1. Entrada por consignação.
+3.5.2. Devolução, consumo e faturamento.
+
+------------------------------------------------------------------------------------------------
+
+4. Módulo de Internação – 🛏️ Gestão de Leitos e Cuidados
+4.1. Controle de leitos e ocupação
+4.1.1. Mapa de leitos em tempo real.
+4.1.2. Classificação por tipo (UTI, enfermaria, isolamento etc).
+
+4.2. Gestão da internação
+4.2.1. Admissão, movimentações internas e alta.
+4.2.2. Controle de tempo de permanência.
+
+4.3. Evolução clínica e cuidados
+4.3.1. Evolução médica e de enfermagem.
+4.3.2. Registro de sinais vitais e ocorrências.
+
+4.4. Administração de medicamentos
+4.4.1. Prescrição e conferência de doses.
+4.4.2. Registro de administração via código de barras.
+
+4.5. Módulo de isolamento/quarentena
+4.5.1. Indicação e liberação de isolamento.
+4.5.2. Relatórios para vigilância sanitária.
+
+------------------------------------------------------------------------------------------------
+
+5. Ambulatorial e Pronto Atendimento – 🚑 Urgência e Consultórios
+5.1. Triagem e classificação de risco
+5.1.1. Registro de queixas e sinais.
+5.1.2. Protocolo Manchester.
+
+5.2. Fila de espera e chamada
+5.2.1. Painel de atendimento e senhas.
+5.2.2. Controle de tempo de espera.
+
+5.3. Atendimento multidisciplinar
+5.3.1. Registro de atendimento por médicos, enfermeiros, psicólogos etc.
+5.3.2. Encaminhamentos e prescrições.
+
+5.4. Desfecho do atendimento
+5.4.1. Alta, observação, internação ou encaminhamento.
+5.4.2. Registro de orientações ao paciente.
+
+------------------------------------------------------------------------------------------------
+
+6. Relatórios e BI – 📊 Tomada de Decisão
+6.1. Painéis gerenciais
+6.1.1. Indicadores em tempo real.
+6.1.2. Visualização por perfil (diretoria, coordenação etc).
+
+6.2. Indicadores de desempenho (KPI)
+6.2.1. Taxa de ocupação, média de permanência, giro de leito.
+6.2.2. Tempo médio de atendimento, produção por profissional.
+
+6.3. Relatórios detalhados
+6.3.1. Por setor, profissional, convênio, centro de custo.
+6.3.2. Exportação em PDF, Excel e outros formatos.
+
+6.4. Exportações para órgãos reguladores
+6.4.1. CNES, SIA/SIH/SUS, AIH, APAC.
+6.4.2. Mapas de produção SUS.
+
+------------------------------------------------------------------------------------------------
+
+7. Módulos Complementares – 🔧 Apoio à Gestão
+7.1. Contratos e convênios
+7.1.1. Cadastro de convênios, regras e vigências.
+7.1.2. Controle de reajustes e anexos contratuais.
+
+7.2. Gestão de exames e imagens
+7.2.1. Integração com laboratórios e PACS.
+7.2.2. Resultados acessíveis via PEP e Portal do Paciente.
+
+7.3. Comissões internas
+7.3.1. Gestão de CIH, CCIH, CME, SCIH.
+7.3.2. Documentação e atas.
+
+7.4. Ouvidoria e SAC
+7.4.1. Registro de manifestações (elogio, reclamação, denúncia).
+7.4.2. Acompanhamento e prazo de resposta.
+
+7.5. Agendamento cirúrgico
+7.5.1. Planejamento por sala, equipe e materiais.
+7.5.2. Checklists de cirurgia segura.
+
+7.6. Telemedicina
+7.6.1. Agendamento e atendimento remoto.
+7.6.2. Armazenamento de gravações e prescrições digitais.
+
+7.7. Recursos Humanos
+7.7.1. Controle de escalas, plantões, ponto eletrônico.
+7.7.2. Integração com folha de pagamento.
+
+7.8. Lavanderia e nutrição
+7.8.1. Gestão de enxoval e lavanderia hospitalar.
+7.8.2. Prescrição de dieta, controle de produção e distribuição.
+
+7.9. Portal do Paciente e Familiares – 👨‍👩‍👧‍👦 Acesso e Comunicação
+7.9.1. Acesso do Paciente
+7.9.1.1. Agendamento online de consultas e exames
+7.9.1.2. Visualização de histórico clínico
+7.9.1.3. Acesso a resultados de exames
+7.9.1.4. Solicitações e comunicações diretas
+
+7.9.2. Acesso Familiar
+7.9.2.1. Cadastro e validação de vínculos familiares
+7.9.2.2. Gestão de responsáveis legais e procuradores
+7.9.2.3. Documentação comprobatória de parentesco
+7.9.2.4. Termo de consentimento do paciente
+
+7.9.3. Níveis de Acesso e Permissões
+7.9.3.1. Configuração de perfis por tipo de vínculo
+7.9.3.2. Restrições por tipo de informação
+7.9.3.3. Limitação temporal de acessos
+7.9.3.4. Revogação de permissões
+
+7.9.4. Monitoramento e Acompanhamento
+7.9.4.1. Visualização de status de internação
+7.9.4.2. Acompanhamento de medicações e procedimentos
+7.9.4.3. Boletins médicos e atualizações
+7.9.4.4. Histórico de visitas e acompanhamentos
+
+7.9.5. Comunicação e Notificações
+7.9.5.1. Alertas de alterações importantes
+7.9.5.2. Lembretes de consultas e medicações
+7.9.5.3. Comunicação direta com equipe assistencial
+7.9.5.4. Avisos sobre alterações de estado
+
+7.9.6. Gestão de Documentos
+7.9.6.1. Autorizações e termos de consentimento
+7.9.6.2. Declarações e atestados
+7.9.6.3. Receitas e orientações médicas
+7.9.6.4. Documentos de alta e cuidados
+
+7.9.7. Segurança e Compliance
+7.9.7.1. Autenticação multi-fator para acessos críticos
+7.9.7.2. Registro de logs de acesso familiar
+7.9.7.3. Conformidade com LGPD
+7.9.7.4. Proteção de dados sensíveis
+
+7.9.8. Suporte e Ajuda
+7.9.8.1. Tutoriais e guias de uso
+7.9.8.2. Canal de dúvidas e suporte
+7.9.8.3. FAQ e base de conhecimento
+7.9.8.4. Feedback e sugestões
+
+7.10. Integração com e-SUS AB e S-RES
+7.10.1. Comunicação com sistemas públicos.
+7.10.2. Envio de dados obrigatórios.
+
+------------------------------------------------------------------------------------------------
+
+8. Segurança, Compliance e LGPD – 🔐 Governança de Dados
+
+8.1. Cadastro e gerenciamento de usuários do sistema
+8.1.1. Criação, edição, inativação e exclusão de usuários.
+8.1.2. Definição de perfis de acesso (admin, médico, enfermagem, financeiro etc).
+8.1.3. Vínculo com setores ou unidades específicas.
+
+8.2. Controle de permissões e níveis de acesso
+8.2.1. Acesso baseado em funções (RBAC).
+8.2.2. Restrições por módulo, ação (ver, editar, excluir), e dados sensíveis.
+
+8.3. Logs de auditoria e rastreabilidade
+8.3.1. Registro de atividades por usuário (inclusões, alterações, acessos).
+8.3.2. Histórico de acessos e tentativas de login.
+
+8.4. Configurações do sistema e parâmetros gerais
+8.4.1. Parametrização por tipo de hospital, horário de funcionamento, regras de negócio.
+8.4.2. Tabelas auxiliares (ex: tipos de exame, setores, especialidades, tipos de leito etc).
+
+8.5. Segurança e conformidade (LGPD)
+8.5.1. Controle de consentimento do paciente.
+8.5.2. Gestão de dados pessoais sensíveis.
+8.5.3. Políticas de backup e criptografia.
+
+------------------------------------------------------------------------------------------------
+
+9. Gestão de Compras e Suprimentos – 🛍️ Compras e Licitações
+
+9.1. Gestão de fornecedores
+9.1.1. Cadastro e qualificação de fornecedores
+9.1.2. Documentação legal e certidões
+9.1.3. Histórico de fornecimento e avaliação
+
+9.2. Processo licitatório eletrônico
+9.2.1. Criação e publicação de editais
+9.2.2. Gestão de prazos e cronogramas
+9.2.3. Registro de impugnações e recursos
+9.2.4. Habilitação e classificação de propostas
+
+9.3. Cotações e propostas online
+9.3.1. Portal do fornecedor para envio de propostas
+9.3.2. Comparativo automático de preços
+9.3.3. Negociação eletrônica
+9.3.4. Registro de amostras e pareceres técnicos
+
+9.4. Análise comparativa de preços
+9.4.1. Banco de preços praticados
+9.4.2. Integração com portais de preços públicos
+9.4.3. Análise de mercado e variações
+9.4.4. Justificativa de preços para órgãos de controle
+
+9.5. Workflow de aprovações
+9.5.1. Níveis hierárquicos de aprovação
+9.5.2. Alçadas por valor e tipo de compra
+9.5.3. Assinatura digital de documentos
+9.5.4. Notificações automáticas
+
+9.6. Gestão de contratos com fornecedores
+9.6.1. Elaboração e controle de contratos
+9.6.2. Gestão de vigências e aditivos
+9.6.3. Controle de garantias e cauções
+9.6.4. Aplicação de penalidades
+
+9.7. Integração com portais de compras
+9.7.1. Integração com ComprasNet e BEC
+9.7.2. Importação/exportação de dados
+9.7.3. Conformidade com e-Social e AUDESP
+9.7.4. Prestação de contas eletrônica
+
+9.8. Relatórios e indicadores
+9.8.1. Economia gerada por processo
+9.8.2. Tempo médio de compra
+9.8.3. Performance de fornecedores
+9.8.4. Relatórios para auditoria e compliance
+
+9.9. Gestão de almoxarifado
+9.9.1. Controle de entrada e saída
+9.9.2. Gestão de estoque mínimo
+9.9.3. Inventário rotativo
+9.9.4. Rastreabilidade de produtos
+
+9.10. Planejamento de compras
+9.10.1. Previsão de demanda
+9.10.2. Calendário de compras
+9.10.3. Gestão orçamentária
+9.10.4. Integração com centro de custos
+
+------------------------------------------------------------------------------------------------
+
+
+Exemplos de Sistemas no Mercado
+
+Tasy (Philips) – um dos mais completos e amplamente usados no Brasil.
+MV Sistemas – muito forte em hospitais públicos e grandes redes privadas.
+Soul MV – versão mais moderna da MV para nuvem.
+Hospub (Ministério da Saúde) – sistema gratuito voltado para hospitais públicos, mas com limitações.
+iClinic – mais voltado para clínicas, mas com integração possível em hospitais pequenos.
+Ahgora + PEPs diversos – para controle de ponto e integração com PEPs.
+
+
+
+
+
+
+
