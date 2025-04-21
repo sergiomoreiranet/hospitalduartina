@@ -14,13 +14,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-
-
         User::create([
-            'name' => 'Administrador',
-            'cpf' => '191.097.718-75',
-            'email' => 'ser-moreira@hotmail.com',
-            'password' => Hash::make('123456'),
+            'name' => env('ADMIN_NAME'),
+            'cpf' => env('ADMIN_CPF'),
+            'email' => env('ADMIN_EMAIL'),
+            'password' => Hash::make(env('ADMIN_PASSWORD')),
+        ]);
+
+        $this->call([
+            SectorSeeder::class,
         ]);
     }
 }

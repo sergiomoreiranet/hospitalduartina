@@ -6,6 +6,7 @@
         <title>Sistema de Gestão Operacional - Hospital Santa Luzia</title>
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600,700&display=swap" rel="stylesheet" />
+        <link rel="icon" type="image/png" href="{{ asset('imagens/favicon-16x16.png') }}">
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         <style>
             body {
@@ -135,7 +136,7 @@
     <body>
         <div class="login-container">
             <div class="logo-container">
-                <img src="{{ asset('images/logo.png') }}" alt="Logo Hospital" class="hospital-logo">
+                <img src="{{ asset('imagens/logo.png') }}" alt="Logo Hospital" class="hospital-logo">
                 <h1 class="system-title">Área Restrita</h1>
                 </div>
 

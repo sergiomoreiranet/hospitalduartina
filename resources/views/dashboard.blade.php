@@ -3,13 +3,23 @@
         <div class="bg-[#004358] p-4">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
                 <div class="flex items-center space-x-3">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo Hospital" class="h-8 w-auto">
+                    <img src="{{ asset('imagens/logo.png') }}" alt="Logo Hospital" class="h-8 w-auto">
                     <h2 class="font-semibold text-xl text-white leading-tight">
                         Painel de Controle
                     </h2>
                 </div>
-                <div class="text-sm text-white">
-                    Bem-vindo(a), <span class="font-semibold text-white">{{ Auth::user()->name }}</span>
+                <div class="flex items-center space-x-4">
+                    @if(Auth::user()->is_admin)
+                    <a href="{{ route('users.index') }}" class="text-sm text-white hover:text-gray-200">
+                        Gerenciamento de Usuários
+                    </a>
+                    <a href="{{ route('sectors.index') }}" class="text-sm text-white hover:text-gray-200">
+                        Administração de Setores
+                    </a>
+                    @endif
+                    <div class="text-sm text-white">
+                        Bem-vindo(a), <span class="font-semibold text-white">{{ Auth::user()->name }}</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -210,26 +220,4 @@
             </div>
         </div>
     </div>
-
-    <style>
-        .text-primary-600 { color: #006D87; }
-        .text-success-600 { color: #059669; }
-        .text-warning-600 { color: #D97706; }
-        .text-info-600 { color: #0284C7; }
-        
-        .bg-primary-100 { background-color: #E6F3F7; }
-        .bg-success-100 { background-color: #ECFDF5; }
-        .bg-warning-100 { background-color: #FEF3C7; }
-        .bg-info-100 { background-color: #E0F2FE; }
-        
-        .bg-primary-900 { background-color: #003B4A; }
-        .bg-success-900 { background-color: #064E3B; }
-        .bg-warning-900 { background-color: #78350F; }
-        .bg-info-900 { background-color: #0C4A6E; }
-        
-        .hover\:text-primary-700:hover { color: #005669; }
-        .hover\:text-success-700:hover { color: #047857; }
-        .hover\:text-warning-700:hover { color: #B45309; }
-        .hover\:text-info-700:hover { color: #0369A1; }
-    </style>
 </x-app-layout>
