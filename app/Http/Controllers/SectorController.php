@@ -17,8 +17,15 @@ class SectorController extends Controller
 
     public function index()
     {
-        $sectors = Sector::withCount(['administrators', 'regularUsers'])
-            ->paginate(9); // 9 setores por página para manter o grid 3x3
+        $sectors = Sector::withCount([
+            'administrators as administrators_count' => function($query) {
+                $query->where('is_active', true);
+            },
+            'regularUsers as regular_users_count' => function($query) {
+                $query->where('is_active', true);
+            }
+        ])
+        ->paginate(9); // 9 setores por página para manter o grid 3x3
         return view('sectors.index', compact('sectors'));
     }
 
@@ -154,8 +161,10 @@ class SectorController extends Controller
 
     public function administrators(Sector $sector)
     {
-        $administrators = $sector->administrators()->paginate(10);
-        return view('sectors.admins', compact('sector', 'administrators'));
+        $admins = $sector->administrators()
+            ->where('is_active', true)
+            ->paginate(10);
+        return view('sectors.admins', compact('sector', 'admins'));
     }
 
     public function users(Sector $sector) 
@@ -163,6 +172,7 @@ class SectorController extends Controller
         $users = $sector->users()
             ->where('is_admin', false)
             ->where('is_sector_admin', false)
+            ->where('is_active', true)
             ->paginate(10);
         return view('sectors.users', compact('sector', 'users'));
     }

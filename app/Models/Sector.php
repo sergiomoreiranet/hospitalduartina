@@ -39,7 +39,9 @@ class Sector extends Model
      */
     public function administrators()
     {
-        return $this->hasMany(User::class)->where('is_sector_admin', true);
+        return $this->hasMany(User::class)
+            ->where('is_sector_admin', true)
+            ->where('is_active', true);
     }
 
     /**
@@ -47,7 +49,9 @@ class Sector extends Model
      */
     public function regularUsers()
     {
-        return $this->hasMany(User::class)->where('is_sector_admin', false);
+        return $this->hasMany(User::class)
+            ->where('is_sector_admin', false)
+            ->where('is_active', true);
     }
 
     /**
