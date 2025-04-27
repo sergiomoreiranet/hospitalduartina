@@ -43,6 +43,16 @@ Route::middleware(['auth'])->group(function () {
         Route::resource('sectors', SectorController::class);
         Route::put('sectors/{sector}/restore', [SectorController::class, 'restore'])->name('sectors.restore');
         
+        // Rota alternativa para desativação (GET)
+        Route::get('sectors/{sector}/deactivate', [SectorController::class, 'deactivateGet'])->name('sectors.deactivate');
+        
+        // Rota para processar a desativação
+        Route::post('/sectors/{sector}/confirm-deactivate', [SectorController::class, 'confirmDeactivate'])->name('sectors.confirm-deactivate');
+        Route::post('/sectors/{sector}/direct-deactivate', [SectorController::class, 'directDeactivate'])->name('sectors.direct-deactivate');
+        
+        // Rota para diagnóstico de banco de dados
+        Route::get('/sectors/{sector}/diagnostic-db', [SectorController::class, 'diagnosticDb'])->name('sectors.diagnostic-db');
+        
         // Rotas específicas de setores
         Route::prefix('sectors/{sector}')->group(function () {
             // Visualização de usuários e administradores
