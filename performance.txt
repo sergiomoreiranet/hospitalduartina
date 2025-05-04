@@ -1,0 +1,7 @@
+1. Como evitar problemas de performance e disponibilidade?
+
+1.1. Mantenha o dashboard simples: Mostre apenas atalhos, cards e informações essenciais.
+1.2. Evite carregar grandes volumes de dados diretamente no dashboard.
+1.3 Use cache para dados que mudam pouco (ex: estatísticas gerais).
+Implemente testes e monitore o desempenho em produção.
+1.4 Planeje atualizações e manutenções para horários de menor uso.

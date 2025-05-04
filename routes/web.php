@@ -5,6 +5,9 @@ use App\Http\Controllers\SectorAdministratorController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\SectorController;
+use App\Http\Controllers\PatientController;
+use App\Http\Controllers\PatientFlowController;
+use App\Http\Controllers\ReceptionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -78,6 +81,22 @@ Route::middleware(['auth'])->group(function () {
         ->name('sectors.administrators.update');
     Route::delete('/sectors/{sector}/administrators/{administrator}', [SectorAdministratorController::class, 'destroy'])
         ->name('sectors.administrators.destroy');
+
+    // Rotas de Pacientes
+    Route::resource('pacientes', PatientController::class);
+
+    // Rotas de Fluxo de Pacientes
+    Route::resource('patient-flows', PatientFlowController::class);
+    Route::post('patient-flows/{patientFlow}/start-attendance', [PatientFlowController::class, 'startAttendance'])->name('patient-flows.start-attendance');
+    Route::post('patient-flows/{patientFlow}/finish-attendance', [PatientFlowController::class, 'finishAttendance'])->name('patient-flows.finish-attendance');
+    Route::get('/patient-flows', [PatientFlowController::class, 'index'])->name('patient-flows.index');
+    Route::get('/patient-flows/{patientFlow}', [PatientFlowController::class, 'show'])->name('patient-flows.show');
+    Route::patch('/patient-flows/{patientFlow}/status', [PatientFlowController::class, 'updateStatus'])->name('patient-flows.update-status');
+
+    // Rotas da Recepção
+    Route::get('/reception', [ReceptionController::class, 'index'])->name('reception.index');
+    Route::get('/reception/{patientFlow}/triage', [ReceptionController::class, 'triage'])->name('reception.triage');
+    Route::put('/reception/{patientFlow}/triage', [ReceptionController::class, 'updateTriage'])->name('reception.update-triage');
 });
 
 require __DIR__.'/auth.php';

@@ -43,8 +43,27 @@
 
                             <div>
                                 <x-input-label for="cpf" :value="__('CPF')" />
-                                <x-text-input id="cpf" class="block mt-1 w-full" type="text" name="cpf" :value="old('cpf', $user->cpf)" required />
+                                <x-text-input id="cpf" class="block mt-1 w-full" type="text" name="cpf" :value="old('cpf', $user->cpf)" required maxlength="14" />
                                 <x-input-error :messages="$errors->get('cpf')" class="mt-2" />
+                                <script>
+                                    document.addEventListener('DOMContentLoaded', function () {
+                                        var cpfInput = document.getElementById('cpf');
+                                        if (cpfInput) {
+                                            cpfInput.addEventListener('input', function (e) {
+                                                let value = e.target.value.replace(/\D/g, '');
+                                                if (value.length > 11) value = value.slice(0, 11);
+                                                if (value.length > 9) {
+                                                    value = value.replace(/^(\d{3})(\d{3})(\d{3})(\d{2}).*/, '$1.$2.$3-$4');
+                                                } else if (value.length > 6) {
+                                                    value = value.replace(/^(\d{3})(\d{3})(\d{3}).*/, '$1.$2.$3');
+                                                } else if (value.length > 3) {
+                                                    value = value.replace(/^(\d{3})(\d{3}).*/, '$1.$2');
+                                                }
+                                                e.target.value = value;
+                                            });
+                                        }
+                                    });
+                                </script>
                             </div>
 
                             <div>

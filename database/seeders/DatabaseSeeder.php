@@ -14,15 +14,19 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        User::create([
-            'name' => env('ADMIN_NAME'),
-            'cpf' => env('ADMIN_CPF'),
-            'email' => env('ADMIN_EMAIL'),
-            'password' => Hash::make(env('ADMIN_PASSWORD')),
-        ]);
+        // Criar usuário admin apenas se não existir
+        if (!User::where('cpf', env('ADMIN_CPF'))->exists()) {
+            User::create([
+                'name' => env('ADMIN_NAME'),
+                'cpf' => env('ADMIN_CPF'),
+                'email' => env('ADMIN_EMAIL'),
+                'password' => Hash::make(env('ADMIN_PASSWORD')),
+            ]);
+        }
 
         $this->call([
             SectorSeeder::class,
+            PatientFlowSeeder::class,
         ]);
     }
 }

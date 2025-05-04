@@ -111,6 +111,9 @@ class UserController extends Controller
             'sector_id' => $request->sector_id,
         ]);
 
+        // Envia o e-mail de verificação
+        $user->sendEmailVerificationNotification();
+
         return redirect()->route('users.index')
             ->with('success', 'Usuário criado com sucesso.');
     }

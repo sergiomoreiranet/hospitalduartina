@@ -25,7 +25,7 @@ class SectorController extends Controller
                 $query->where('is_active', true);
             }
         ])
-        ->paginate(9); // 9 setores por página para manter o grid 3x3
+            ->paginate(9); // 9 setores por página para manter o grid 3x3
         return view('sectors.index', compact('sectors'));
     }
 
@@ -77,7 +77,7 @@ class SectorController extends Controller
             'método' => $request->method(),
             'usuário' => auth()->user()->name
         ]);
-        
+
         if (!auth()->user()->is_admin) {
             return redirect()->route('sectors.index')
                 ->with('error', 'Apenas administradores podem desativar setores.');

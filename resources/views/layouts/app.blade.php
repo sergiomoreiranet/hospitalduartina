@@ -34,8 +34,17 @@
 
             <!-- Page Content -->
             <main>
+                @if(Auth::user()->is_admin)
+                    <!-- Menu e cards de todos os módulos -->
+                @elseif(Auth::user()->sector->name == 'Recepção')
+                    <!-- Menu e cards de recepção -->
+                @elseif(Auth::user()->sector->name == 'Farmácia')
+                    <!-- Menu e cards de farmácia -->
+                @endif
+
                 {{ $slot }}
             </main>
         </div>
+        @stack('scripts')
     </body>
 </html>
